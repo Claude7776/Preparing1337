@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   <ft_putnbr>                                         :+:      :+:    :+:   */
+/*   <filename>                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codecld7 <codecl@proton.me>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,45 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_atoi(char *str)
 {
-	write(1, &c, 1);
-}
+	int	sign;
+	int	result;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	sign = 1;
+	result = 0;
+	while (*str == ' ' || *str == 9 && *str == 13)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
+		str++;
 	}
-	if (nb < 0)
+	if (*str == '-' || *str == '+')
 	{
-		ft_putchar('-');
-		nb = nb * -1;
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	if (nb >= 10)
+	while (*str >= '0' && *str <= '9')
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		result = result * 10 + (*str - '0');
+		str++;
 	}
-	else
-		ft_putchar(nb + 48);
+	return (result * sign);
 }
 /*#include <stdio.h>
 
-
-int main(int argc, char *argv[])
-
+int main()
 {
-	ft_putnbr(-1337);
-	printf("\n");
-	ft_putnbr(42);
-	printf("\n");
-	ft_putnbr(2147483647);
-	printf("\n");
-	ft_putnbr(-2147483648);
+	printf("%d", ft_atoi("-1azZ337"));
 }*/
