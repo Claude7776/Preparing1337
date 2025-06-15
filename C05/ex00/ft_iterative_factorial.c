@@ -29,6 +29,8 @@ int	ft_iterative_factorial(int nb)
 
 int	main(int argc, char argv[])
 {
-	printf("%d", ft_iterative_factorial(5));
-	printf("%d", ft_iterative_factorial(0));
+	printf("%d\n", ft_iterative_factorial(5));
+	printf("%d\n", ft_iterative_factorial(2));
+	printf("%d\n", ft_iterative_factorial(-8));
+	printf("%d\n", ft_iterative_factorial(0));
 }*/
