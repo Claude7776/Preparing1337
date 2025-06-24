@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   <filename>                                         :+:      :+:    :+:   */
+/*   ft_iterat                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codecld7 <codecl@proton.me>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
-
+int	ft_iterative_power(int nb, int power)
 {
 	int	result;
 
 	result = 1;
-	while (nb > 0)
-	{
-		result *= nb;
-		nb--;
-	}
-	if (nb < 0)
+	if (power < 0)
 		return (0);
+	if (nb == 0)
+	{
+		return (1);
+	}
+	while (power >= 1)
+	{
+		result = result * nb;
+		power--;
+	}
 	return (result);
 }
-/*#include <stdio.h>
+/*#include<stdio.h>
 
 int	main(int argc, char argv[])
 {
-	printf("%d\n", ft_iterative_factorial(5));
-	printf("%d\n", ft_iterative_factorial(2));
-	printf("%d\n", ft_iterative_factorial(-8));
-	printf("%d\n", ft_iterative_factorial(0));
+	int a = 2;
+	int b = 2;
+printf("voici la puissance %d\n", ft_iterative_power(2, 2));
 }*/
