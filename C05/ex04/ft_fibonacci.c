@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterat                                          :+:      :+:    :+:   */
+/*   <filename>                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codecld7 <codecl@proton.me>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	result;
+int	ft_fibonacci(int index)
 
-	result = 1;
-	if (power < 0)
-		return (0);
-	if (nb == 0)
+{
+	if (index < 0)
+		return (-1);
+	if (index > 0)
 	{
-		return (1);
+		ind
+ex = index + 1 + 2;
 	}
-	while (power >= 1)
-	{
-		result = result * nb;
-		power--;
-	}
-	return (result);
 }
-/*#include<stdio.h>
-
-int	main(int argc, char argv[])
-{
-printf("voici la puissance %d\n", ft_iterative_power(2, 2));
-}*/
