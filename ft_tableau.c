@@ -14,11 +14,11 @@
 
 int	main(int agrc, char *argv[])
 {
-	int	tableau[4] = {1, 2, 3, 4};
+	int	tableau[4];
 
+	tableau = {1, 2, 3, 4};
 	printf("%d: voici le caractère\n", *(tableau));
 	printf("%d: voici le 2 caractère\n", *(tableau + 1));
 	printf("%d: voici le 3 caractère\n", *(tableau + 2));
 	printf("%d: voici le 4 caractère\n", *(tableau + 3));
-
 }
