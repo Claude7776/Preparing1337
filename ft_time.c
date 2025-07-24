@@ -19,10 +19,9 @@ void	ft_dec_time(int *h, int *m)
 	*m = *m % 60;
 }
 
-int	main()
-
+int	main(int argc, char **argv[])
 {
-	int heure = 0;
-	int minutes = 90;
-	printf("%d heures et %d minutes", ft_dec_time(heure, minutes));
+	int	heures = 0, minutes = 90;
+	ft_dec_time(&heures, &minutes);
+	printf("%d heures et %d minutes\n", heures, minutes);
 }
