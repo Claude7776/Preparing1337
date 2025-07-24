@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+
 void	ft_punition(int nbl)
 {
 	int	i;
@@ -21,8 +22,8 @@ void	ft_punition(int nbl)
 		i++;
 	}
 }
-
+/*
 int	main()
 {
 	ft_punition(42);
-}
+}*/
