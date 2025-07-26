@@ -12,9 +12,12 @@
 
 int	ft_strlen(char *str)
 {
-	while (*str)
-		str++;
-	return (str);
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 /*#include<stdio.h>
 
