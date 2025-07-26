@@ -16,6 +16,7 @@ C02 → Tableaux et pointeurs OK
 
 C03 à C09 → Fonctions avancées, algorithmes et projets bonus
 en cours ...
+Aussi des exo perso pour mon cerveau blablabla
 
 Notes/ → Résumés, rappels, et astuces personnelles
 
