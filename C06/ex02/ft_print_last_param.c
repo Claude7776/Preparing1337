@@ -12,18 +12,12 @@
 
 #include <unistd.h>
 
-int	main(int ac, char **av)
+int	main(int argc, char **argv)
 {
-	int	i;
-
-	i = 0;
-	if (ac >= 2)
+	while (*argv[argc - 1] && argc)
 	{
-		while (av[0][++i])
-		{
-			write(1, &av[0][i], 1);
-		}
+		write(1, argv[argc - 1]++, 1);
+		write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
 	return (0);
 }
